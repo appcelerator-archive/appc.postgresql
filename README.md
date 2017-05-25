@@ -79,6 +79,7 @@ and we have Key for the table 'UserName' this will create a record with 'UserNam
 The connector supports queries. You can use the following: '{"Name": {"$eq": "Tom"}}' to get the record with 'Name' equal to 'Tom'.
 Full list of all supported operators :
 
+
 Operator | Meaning              
 ---------|----------------------
 $lt      | less than            
