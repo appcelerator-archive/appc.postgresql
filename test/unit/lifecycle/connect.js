@@ -10,8 +10,7 @@ mockery.enable({
 })
 
 const pg = (conf) => { }
-const stub = sinon.stub()
-const PgClient = stub.callsFake((conf) => { return pg })
+const PgClient = sinon.stub().callsFake((conf) => { return pg })
 
 mockery.registerMock('pg', pg)
 mockery.registerMock('../utility/PgClient', PgClient)
