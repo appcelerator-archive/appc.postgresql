@@ -53,7 +53,10 @@
     "sinon": "^2.3.1",
     "standard": "^10.0.2",
     "tap": "^10.3.2",
-    "cross-env": "5.1.1"
+    "cross-env": "5.1.1",
+    "snazzy": "7.0.0",
+    "tap-mocha-reporter": "3.0.6",
+    "npm-check": "5.5.2"
   },
   "scripts": {
     "start": "appc run",
