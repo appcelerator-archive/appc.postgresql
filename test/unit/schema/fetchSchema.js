@@ -6,10 +6,10 @@ const sinon = require('sinon')
 
 const fetchSchema = require('../../../lib/schema/fetchSchema').fetchSchema
 
-const sandbox = sinon.sandbox
+let sandbox
 
 tap.beforeEach((done) => {
-  sandbox.create()
+  sandbox = sinon.createSandbox()
   done()
 })
 

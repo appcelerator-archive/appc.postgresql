@@ -20,13 +20,13 @@ const PgClient = {
   }
 }
 const querySpy = sinon.spy(PgClient, 'query')
-const sandbox = sinon.sandbox
+let sandbox
 
 var arrow
 var connector
 
 tap.beforeEach((done) => {
-  sandbox.create()
+  sandbox = sinon.createSandbox()
   done()
 })
 

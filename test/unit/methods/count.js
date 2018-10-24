@@ -18,13 +18,13 @@ const PgClient = {
   }
 }
 const countSpy = sinon.spy(PgClient, 'count')
-const sandbox = sinon.sandbox
+let sandbox
 
 var arrow
 var connector
 
 tap.beforeEach((done) => {
-  sandbox.create()
+  sandbox = sinon.createSandbox()
   done()
 })
 

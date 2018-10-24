@@ -2,12 +2,13 @@
 const tap = require('tap')
 const test = tap.test
 const sinon = require('sinon')
-const sandbox = sinon.sandbox
 const mockery = require('mockery')
 const _ = require('lodash')
 const pgMock = require('../../pgMock')
 const queryUtils = require('../../../lib/utility/queryUtils')
 const modelUtils = require('../../../lib/utility/modelUtils')
+
+let sandbox
 
 mockery.enable({
   warnOnReplace: false,
@@ -23,7 +24,7 @@ mockery.registerMock('pg', mock)
 const PgClient = require('../../../lib/utility/PgClient')
 
 tap.beforeEach((done) => {
-  sandbox.create()
+  sandbox = sinon.createSandbox()
   done()
 })
 

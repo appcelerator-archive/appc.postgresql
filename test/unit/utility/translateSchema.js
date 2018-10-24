@@ -6,7 +6,7 @@ const server = require('../../server')
 const sinon = require('sinon')
 const src = require('../../data/schema.json')
 
-const sandbox = sinon.sandbox
+const sandbox = sinon.createSandbox()
 var arrow
 var connector
 

@@ -17,13 +17,13 @@ const PgClient = {
   }
 }
 const deleteOneSpy = sinon.spy(PgClient, 'deleteOne')
-const sandbox = sinon.sandbox
+let sandbox
 
 var arrow
 var connector
 
 tap.beforeEach((done) => {
-  sandbox.create()
+  sandbox = sinon.createSandbox()
   done()
 })
 
